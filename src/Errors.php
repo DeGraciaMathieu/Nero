@@ -32,7 +32,7 @@ class Errors {
      */
     public function exception($file, $line)
     {
-        $message = "<b>exception</b> 'FatalErrorException' with message 'syntax error, unexpected '' (T_STRING)' in %s:%d";
+        $message = "<b>Fatal error</b>: Uncaught Error: Class 'Exception' not found in <b>%s</b>:<b>%d</b>";
 
         $this->executor->send($message, $file, $line);
     }
