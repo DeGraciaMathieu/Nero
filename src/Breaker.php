@@ -14,7 +14,7 @@ class Breaker {
     {
         $file = isset($arguments[0]) ? $arguments[0] : self::getFilePath();
 
-        $line = isset($arguments[1]) ? $arguments[1] : self::getLine();
+        $line = isset($arguments[1]) ? $arguments[1] : self::getLine($file);
 
         call_user_func_array([new Errors, $name], [$file, $line]);
     }
@@ -27,15 +27,16 @@ class Breaker {
     {
         $backtrace = debug_backtrace();
 
-        return $backtrace[0]['file'];
+        return $backtrace[1]['file'];
     }
 
     /**
-     * random number between 1 to 200
+     * random number
+     * @param string $path
      * @return integer
      */
-    protected static function getLine()
+    protected static function getLine($path)
     {
-        return rand(1, 200);
+        return rand(1, count(file($path)));
     }    
 }
