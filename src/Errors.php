@@ -12,12 +12,12 @@ class Errors {
     }
 
     /**
-     * get a parse error
+     * get a syntax error
      * @param  string $file
      * @param  integer $line
      * @return exit
      */
-    public function syntax($file, $line)
+    public function syntaxError($file, $line)
     {
         $message = "<b>Parse error</b>: syntax error, unexpected '' (T_STRING) in <b>%s</b> on line <b>%d</b>";
 
@@ -25,12 +25,12 @@ class Errors {
     }
 
     /** 
-     * get a FatalErrorException
+     * get a class not found error
      * @param  string $file
      * @param  integer $line
      * @return exit
      */
-    public function exception($file, $line)
+    public function classNotFound($file, $line)
     {
         $message = "<b>Fatal error</b>: Uncaught Error: Class 'Exception' not found in <b>%s</b>:<b>%d</b>";
 
