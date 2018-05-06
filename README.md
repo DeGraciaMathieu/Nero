@@ -1,3 +1,8 @@
+<p align="center">
+<a class="badge-align" href="https://www.codacy.com/app/DeGraciaMathieu/Nero?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DeGraciaMathieu/Nero&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/d79b8fc9f4bb44b48af1faf0881d4e73"/></a>
+<a href="https://scrutinizer-ci.com/g/degraciamathieu/nero/?branch=master"><img src="https://scrutinizer-ci.com/g/DeGraciaMathieu/Nero/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+</p>
+
 # DeGraciaMathieu/Nero
 
 Crash your application with elegance
