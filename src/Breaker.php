@@ -14,9 +14,11 @@ class Breaker {
     {
         $file = isset($arguments[0]) ? $arguments[0] : self::getFilePath();
 
-        $line = isset($arguments[1]) ? $arguments[1] : self::getLine($file);
+        $line = isset($arguments[1]) ? $arguments[1] : self::getRandomLine($file);
 
-        call_user_func_array([new Errors, $name], [$file, $line]);
+        $parameter = isset($arguments[2]) ? $arguments[2] : null;
+
+        call_user_func_array([new Errors, $name], [$file, $line, $parameter]);
     }
 
     /**
@@ -35,8 +37,14 @@ class Breaker {
      * @param string $path
      * @return integer
      */
-    protected static function getLine($path)
+    protected static function getRandomLine($path)
     {
-        return rand(1, count(file($path)));
-    }    
+        $numberMax = 200;
+
+        if (file_exists($path)) {
+            $numberMax = count(file($path));
+        }
+
+        return rand(1, $numberMax);
+    }   
 }

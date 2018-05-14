@@ -6,13 +6,14 @@ class Executor {
 
     /**
      * handle the death
-     * @param  string $message
+     * @param  string|null $message
+     * @param  string $parameter
      * @param  string $file
      * @param  integer $line
      * @return exit
      */
-    public function send($message, $file, $line)
+    public function send($message, $parameter, $file, $line)
     {
-        exit(sprintf($message, $file, $line));
+        exit(sprintf($message, $parameter, $file, $line));
     }
 }
