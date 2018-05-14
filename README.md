@@ -55,6 +55,7 @@ use \DeGraciaMathieu\Nero\Breaker;
 
 Breaker::syntaxError('Website\routes\web.php', 120, ';');
 ```
+![Demo](https://i62.servimg.com/u/f62/11/13/61/32/syntax12.png)
 
 ```php
 require 'vendor\autoload.php';
@@ -63,3 +64,4 @@ use \DeGraciaMathieu\Nero\Breaker;
 
 Breaker::classNotFound('Website\routes\web.php', 30, 'MySpecificClass');
 ```
+![Demo](https://i62.servimg.com/u/f62/11/13/61/32/classe11.png)
