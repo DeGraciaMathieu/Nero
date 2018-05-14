@@ -26,7 +26,7 @@ Breaker::syntaxError($file = null, $line = null, $parameter = null);
 
 By default the method will automatically complete all these criteria.
 
-### Basic usage
+## Basic usage
 
 ```php
 require 'vendor\autoload.php';
@@ -46,7 +46,7 @@ Breaker::classNotFound();
 ```
 ![Demo](https://i62.servimg.com/u/f62/11/13/61/32/classe10.png)
 
-### Usage with parameters
+## Usage with parameters
 
 ```php
 require 'vendor\autoload.php';
